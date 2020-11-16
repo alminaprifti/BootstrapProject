@@ -1,0 +1,19 @@
+{
+  "name": "webdeveloperproject",
+  "version": "1.0.0",
+  "description": "Web Developer Projectnpmn",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run lite",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
