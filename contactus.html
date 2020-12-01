@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
     <link rel="stylesheet" href="css/styles.css" />
-    <title> BRIEBERG: A Better Way To BRIEBERG</title>
+    <title> WEDDING PLANNER</title>
 </head>
 
 
@@ -41,17 +41,17 @@
                     <li class="nav-item"> <a class="nav-link" href="blog.html"><i class="fa fa-list fa-lg"></i> BLOG
                         </a>
                     </li>
-                    <li class="nav-item"> <a class="nav-link" href="registry.html"><i class="fa fa-list fa-lg"></i>
-                            REGISTRY </a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i
+                    <li class="nav-item"> <a class="nav-link" href="shop.html"><i class="fa fa-list fa-lg"></i>
+                            Shop </a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#"><i
                                 class="fa fa-address-card fa-lg"></i> CONTACT</a> </li>
                 </ul>
                 <span class="navbar-text ml-auto">
 
 
-                    <a role="button" href="#scheduleacallForm" class="btn btn-warning text-nowrap">
+                    <a role="button" href="#rsvpForm" class="btn btn-warning text-nowrap">
                         <i class="fa fa-phone"></i>
-                         SCHEDULE A CALL
+                        RSVP
                     </a>
 
 
@@ -62,28 +62,56 @@
         </div>
     </nav>
 
-    <h2>Send us your Feedback</h2>
     <div class="container">
+        
+       
         <div class="row">
-            <div class="col-6">
-                <div class=" image-position-left" style="width: 50%;">
-                    <a class="lazyImage flex flex-col image-bigger image-cover-height image-cover"></a>
-                    <img src="img/BrieBug_Contact_Us.png" class="flex-none" alt="" loading="lazy">
-                    </a>
-                </div>
+            <div class="col">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Contact</li>
+                </ol>
+                <h2>Contact Us</h2>
+                <hr />
             </div>
-            <div class="col-6">
-                <form>
+        </div>
+
+        <div class="row row-content align-items-center" style="color: white;">
+            <div class="col-sm-4">
+                <h5>Our Address</h5>
+                <address>
+                    Wedding Planner<br />
+                    35 W 46nd Street New York<br />
+                    U.S.A.
+                </address>
+            </div>
+            <div class="col">
+                <a role="button" class="btn btn-link" href="Tel:+(123) 456 - 7890 - 456 - 7890"> <i class="fa fa-phone"></i>
+                    +(123) 456 - 7890 - 456 - 7890 </a><br>
+                <a role="button" class="btn btn-link" href="mailto:	
+                theaisle@qodeinteractive.com"> <i
+                        class="fa fa-envelope-o"></i> 	
+                        theaisle@qodeinteractive.com </a>
+            </div>
+        </div>
+
+        <div class="row row-content" style="color: white;">
+            <div class="col-12">
+                <h2>Send us your Feedback</h2>
+                <hr />
+            </div>
+            <div class="col-md-10">
+                <form> <!--Start FORM-->
                     <div class="form-group row">
-                        <label for="lastName" class="col-md-2 col-form-label">First Name </label>
-                        <div class="col">
+                        <label for="firstName" class="col-md-2 col-form-label">First Name </label>
+                        <div class="col-md-10">
                             <input type="text" class="form-control" id="firstName" name="firstName"
                                 placeholder="First Name" />
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="lastName" class="col-md-2 col-form-label"> Last Name</label>
-                        <div class="col">
+                        <div class="col-md-10">
                             <input type="text" class="form-control" id="lastName" name="lastName"
                                 placeholder="Last Name" />
                         </div>
@@ -101,7 +129,7 @@
                     </div>
                     <div class="form-group row">
                         <label for="email" class="col-md-2 col-form-label"> Email </label>
-                        <div class="col">
+                        <div class="col-md-10">
                             <input type="email" class="form-control" id="email" name="email" placeholder="Email" />
                         </div>
                     </div>
@@ -114,8 +142,7 @@
                                 <label for="contactYes" class="form-check-label">Yes</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="form-check-input" name="contactRadio" id="contactNo"
-                                    value="no" />
+                                <input type="radio" class="form-check-input" name="contactRadio" id="contactNo" value="no" />
                                 <label for="contactNo" class="form-check-label">No</label>
                             </div>
                         </div>
@@ -123,7 +150,7 @@
                     </div>
                     <div class="form-group row">
                         <label for="feedback" class="col-md-2 col-form-label"> Your Feedback </label>
-                        <div class="col">
+                        <div class="col-md-10">
                             <textarea id="feedback" class="form-control" name="Feedback" rows="8"></textarea>
                         </div>
                     </div>
@@ -132,10 +159,16 @@
                             <button class=" btn btn-primary" type="submit"> Send Feedback</button>
                         </div>
                     </div>
-                </form>
+
+                </form> <!--Finish FORM-->
             </div>
         </div>
+
     </div>
+
+    <div class="embed-responsive embed-responsive-100x400px">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d35818.719732048536!2d-4.25169!3d55.868392!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488815562056ceeb%3A0x71e683b805ef511e!2sGlasgow%2C+Glasgow+City%2C+UK!5e0!3m2!1sen!2sus!4v1448625188752" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
 
     </div>
     <footer class="site-footer">
