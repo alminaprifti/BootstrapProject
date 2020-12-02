@@ -173,21 +173,9 @@ header h2 {
     .fixed-parallax {
         position: fixed;
         background-attachment: unset;
-        -webkit-transform: translateZ(0);
         /* necessary for iOS! */
     }
 }
-
-
-
-/*content to be vertically centered*/
-
-
-
-
-
-
-
 
 .content {
     position: absolute;
@@ -604,4 +592,23 @@ section .section-title {
 
 .card .footer .btn-simple {
     margin-top: -6px;
+}
+
+/* ===== Div embaded image ======*/
+.divContact {
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/wedding1.jpg');
+    background-size: cover;
+    background-position: center left;
+    height: 300px;
+    object-fit: cover;
+}
+
+.centered {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: white;
 }
