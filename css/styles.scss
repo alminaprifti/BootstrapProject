@@ -1,6 +1,9 @@
 body {
     font-family: "Open Sans", sans-serif;
     overflow-x: hidden;
+    margin: 0;
+    border: 0;
+    background-color: rgb(187, 145, 145);
 }
 
 h1,
@@ -10,7 +13,7 @@ h3 {
 }
 
 h2 {
-    color: #3046C5;
+    color: #c53030;
 }
 
 header h2 {
@@ -18,7 +21,7 @@ header h2 {
 }
 
 .site-footer {
-    background-image: linear-gradient(270deg, rgb(138, 131, 129) 0%, rgb(37, 35, 33), rgb(12, 8, 4) 100%);
+    background-image: linear-gradient(270deg, rgba(201, 157, 157, 0.5) 0%, rgba(248, 241, 241, 0.4), rgb(136, 130, 124) 100%);
     padding: 20px 0;
 }
 
@@ -40,7 +43,7 @@ header h2 {
 }
 
 .navbar {
-    background-image: linear-gradient(270deg, rgb(138, 131, 129) 0%, rgb(37, 35, 33), rgb(12, 8, 4) 100%);
+    background-image: linear-gradient(270deg, rgba(189, 135, 135, 0.5) 0%, rgba(248, 241, 241, 0.4), rgb(136, 130, 124) 100%);
 }
 
 /* ===== CAROUSEL ======*/
@@ -68,23 +71,13 @@ header h2 {
 .carousel-item .caption {
     color: white;
     font-size: 50px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(201, 157, 157, 0.5);
     padding: 40px;
     animation-duration: 1s;
     animation-delay: 2s;
 
     top: 35%;
     bottom: auto;
-}
-
-.animated {
-    -webkit-animation-duration: 1.5s;
-    animation-duration: 1.5s;
-}
-
-.fadeInRight {
-    -webkit-animation-name: fadeInRight;
-    animation-name: fadeInRight;
 }
 
 .carousel-item img {
@@ -108,7 +101,7 @@ header h2 {
     border: none;
     border-radius: 50%;
     background-color: grey;
-    box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 1px 1px 1px 1px rgba(223, 168, 168, 0.5);
 }
 
 .carousel-indicators .active {
@@ -118,59 +111,9 @@ header h2 {
     background-color: #76da83;
 }
 
-/* My borders showing different div 
-.col,
-div[class^="col-"],
-label[class^="col-"] {
-    border: 1px solid red;
-    margin: 2px;
-}
-
-.row {
-    border: 3px solid blue;
-    padding: 2px;
-    margin: 5px;
-}
-
-.container,
-.container-fluid {
-    border: 3px solid green;
-    padding: 2px;
-    margin: 5px;
-}
-
-.media {
-    border: 3px solid yellow;
-    padding: 2px;
-    margin: 5px;
-}
-
-.card {
-    border: 3px solid purple;
-    padding: 2px;
-    margin: 5px;
-}
-
-.orange-border {
-    border: 1px solid green;
-}
-*/
-/*
-Animate Bootstrap Carousel
-Element by thecodeblock.com
-*/
-
 /********************************/
 /*       Coloring indicators    */
 /********************************/
-/* Tiny reset thingy */
-
-body {
-    margin: 0;
-    border: 0;
-    background-color: #000;
-}
-
 #content-block {
     position: relative;
     overflow: hidden;
@@ -512,12 +455,14 @@ body {
         width: 100%;
     }
 }
-.embed-responsive-100x400px{
-    padding-bottom: 400px;
-  }
-  /* ===== CARDS ======*/
 
-  section {
+.embed-responsive-100x400px {
+    padding-bottom: 400px;
+}
+
+/* ===== CARDS ======*/
+
+#team {
     padding: 60px 0;
 }
 
@@ -581,7 +526,7 @@ section .section-title {
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(192, 57, 43, 0.8) !important;
+    background: rgba(240, 176, 169, 0.8) !important;
     -webkit-transform: rotateY(-180deg);
     -moz-transform: rotateY(-180deg);
     -o-transform: rotateY(-180deg);
@@ -626,7 +571,7 @@ section .section-title {
     /*color: #007b5e !important;*/
     height: 45px;
     color: #ffffff;
-    background-image: linear-gradient(to bottom, rgba(231, 76, 60, 0.8) 0, #c0392b 100%);
+    background-image: linear-gradient(to bottom, rgba(240, 182, 175, 0.8) 0, #d68b82 100%);
 }
 
 .frontside .card-body,
@@ -636,7 +581,7 @@ section .section-title {
 
 .frontside .card .cover img {
     width: 100%;
-    height: 180px;
+    height: 300px;
     object-fit: cover;
     /*border-radius: 50%;*/
 }
