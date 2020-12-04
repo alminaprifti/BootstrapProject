@@ -3,7 +3,8 @@ body {
   overflow-x: hidden;
   margin: 0;
   border: 0;
-  background-color: #bb9191; }
+  background-color: #bb9191;
+  /*background: linear-gradient(to left, #dce35b, #45b649);*/ }
 
 h1,
 h2,
@@ -31,7 +32,7 @@ header h2 {
 
 .row-content {
   padding: 50px 0;
-  border-bottom: 1px ridge;
+  /*border-bottom: 1px ridge;*/
   min-height: 200px; }
 
 .navbar {
@@ -347,6 +348,14 @@ section .section-title {
 .card:hover {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; }
 
+.cardHeight {
+  min-height: 350px; }
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
 .image-flip:hover .backside,
 .image-flip.hover .backside {
   -webkit-transform: rotateY(0deg);
@@ -455,13 +464,43 @@ section .section-title {
 .card .footer .btn-simple {
   margin-top: -6px; }
 
+.nav-pills-custom .nav-link {
+  color: #aaa;
+  background: #fff;
+  position: relative; }
+
+.nav-pills-custom .nav-link.active {
+  color: #e04d4d;
+  background: #fff; }
+
+.nav-pills .nav-link.active {
+  color: #fff;
+  background: #e04d4d; }
+
+/* Add indicator arrow for the active tab */
+@media (min-width: 992px) {
+  .nav-pills-custom .nav-link::before {
+    content: '';
+    display: block;
+    border-top: 8px solid transparent;
+    border-left: 10px solid #e04d4d;
+    border-bottom: 8px solid transparent;
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+    opacity: 0; } }
+
+.nav-pills-custom .nav-link.active::before {
+  opacity: 1; }
+
 /* ===== Div embaded image ======*/
 .divContact {
   width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/wedding1.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/foto6.jpg");
   background-size: cover;
   background-position: center left;
-  height: 300px;
+  height: 500px;
   object-fit: cover; }
 
 .centered {
@@ -471,3 +510,80 @@ section .section-title {
   transform: translate(-50%, -50%);
   font-size: 60px;
   color: white; }
+
+/*=====Countdown===*/
+/*Make a square*/
+.containerCD {
+  position: relative;
+  top: 0;
+  /*top: 80px;
+  left: 100px;
+  right: 100px;
+  bottom: 480px;
+ background: #000
+    url(https://images.pexels.com/photos/4195399/pexels-photo-4195399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
+    no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: luminosity;*/
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 50px 50px rgba(0, 0, 0, 0.9), 0 0 0 100px rgba(0, 0, 0, 0.1); }
+
+.containerCD h2 {
+  text-align: center;
+  font-size: 10em;
+  font-weight: 600;
+  line-height: 0.7em;
+  color: #f8f8f8;
+  margin-top: -80px; }
+
+.containerCD h2 span {
+  display: block;
+  font-weight: 300;
+  letter-spacing: 6px;
+  font-size: 0.2em;
+  color: #fff; }
+
+.countdown {
+  display: flex;
+  margin-top: 10px; }
+
+.countdown div {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background: #000000;
+  color: #fff;
+  margin: 0 15px;
+  font-size: 3em;
+  font-weight: 500; }
+
+.countdown div:before {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  background: #ffce00;
+  color: #333;
+  font-size: 0.35em;
+  line-height: 35px;
+  font-weight: 300; }
+
+.countdown div#day:before {
+  content: "Days"; }
+
+.countdown div#hour:before {
+  content: "Hours"; }
+
+.countdown div#minute:before {
+  content: "Minutes"; }
+
+.countdown div#second:before {
+  content: "Seconds"; }
