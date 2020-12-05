@@ -1,177 +1,325 @@
-<div class="image-box  image-position-left">
-    <div class="widget-preserving-ratio-outer " style="padding-bottom: 47.67146486028789%">
+<!DOCTYPE html>
+<html lang="en">
 
-      <div class="widget-preserving-ratio-inner" data-slide="//content.web-repository.com/s/712923024890341111/uploads/Images/BrieBug_Contact_Us-8019306.png">
-        <a class="lazyImage flex flex-col
-            image-bigger image-cover-height image-cover" style="box-shadow: nullpx nullpx nullpx nullpx  none;">
-          <img src="//content.web-repository.com/s/712923024890341111/uploads/Images/BrieBug_Contact_Us-8019306.png" class="flex-none" alt="" style="box-shadow: nullpx nullpx nullpx nullpx  none;" loading="lazy">
-        </a>
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Additional CSS must be placed after Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-image: url('https://lh3.googleusercontent.com/-QEYT2a1VA-s/V9IhCZNMfKI/AAAAAAAAAuY/kuuJ3LD4L3QG_0EwaNFhIalJPOD-C7opQCJoC/w1600-h900/black%2Band%2Bgreen%2Bshards.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        img {
+            width: 100%;
+            height: 200px;
+        }
+
+        .fa {
+            cursor: pointer;
+        }
+
+        .header {
+            width: 100%;
+            overflow: auto;
+            background-color: #31353d;
+            color: #00a000;
+            clear: both;
+            padding: 20px 50px;
+            box-sizing: border-box;
+        }
+
+        .heading {
+            float: left;
+        }
+
+        .cart {
+            float: right;
+            text-align: center;
+        }
+
+        .total-text p {
+            display: inline;
+        }
+
+        #cart-items {
+            position: absolute;
+            right: 20px;
+            top: 10%;
+            background-color: #31353d;
+            margin-top: 50px;
+            padding: 50px 40px;
+            z-index: 999;
+        }
+
+        .item {
+            position: relative;
+            float: left;
+            margin: 1%;
+            border: 1px solid #00a000;
+            width: 30%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .item-detail h4 {
+            color: #fff;
+        }
+
+        .item-detail p {
+            color: #00a000;
+            font-weight: bold;
+        }
+
+        .prices p {
+            display: inline;
+        }
+
+        .overflow {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #00a000;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 80%;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .overflow i {
+            position: absolute;
+            top: 20%;
+            left: 40%;
+        }
+
+        .overflow:hover {
+            opacity: 1;
+        }
+
+       .price-display {
+            float: right;
+        }
+
+        .remove {
+            background-color: #00a000;
+            border-color: #00a000;
+            border-radius: 3px;
+            color: #fff;
+            margin: 0px 5px;
+            padding: 0px 2px;
+            float: right;
+        }
+
+        #list-item li {
+            margin: 10px 0px;
+        }
+    </style>
+    <title> OUR WEDDING </title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="heading">
+            <h1>Shopping Cart</h1>
         </div>
-    </div>
-  </div>
-  <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
-    <div class="container">
-        <a class="navbar-brand" href="#"><img src="img/logow.png" height="50" width="100"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="nucampNavbar">
-            <ul class="navbar-nav">
-                <li class="nav-item active"><a class="nav-link mr-2" href="#"><i class="fa fa-home fa-lg"></i> HOME</a></li>
-                <li class="nav-item"><a class="nav-link mr-3" href="aboutus.html"> ABOUT US</a></li>
-                <li class="nav-item"><a class="nav-link mr-3" href="#"> SERVICES</a></li>
-                <li class="nav-item"><a class="nav-link mr-3" href="#"> PRICING</a></li>
-                <li class="nav-item"><a class="nav-link mr-3" href="contactus.html"> CONTACT US</a></li>
-            </ul>
-            <!--------------------->
-
-            <!-- Modals pt1 -->
-            <span class="navbar-text ml-auto">
-                <a role="button" data-toggle="modal" data-target="#loginModal">
-                    <i class="fa fa-sign-in"></i> Login
-                </a>
-            </span>
-            <span class="navbar-text ml-4">
-                <a role="button" data-toggle="modal" data-target="#signupModal">
-                    <i class="fas fa-sign-out-alt"></i> Register
-                </a>
-            </span>
-            <!------------------------>
-
+        <div class="cart">
+            <i class="fa fa-shopping-basket fa-2x"></i>
+            <i class="fa fa-caret-down"></i><br>
+            <div class="total-text">
+                <p>Items</p>
+                <p id="items-basket"></p>
+            </div>
         </div>
-    </div>
-</nav>
-mar 19:42
 
-Inviato da
-1 Dicembre alle ore 19:44
-<div class="container2 img-fluid" id="pricingImg">
-    <div class="centered animate__animated animate__backInLeft">PRICING</div>
-</div>
-Inviato da Bes Kosova 1 Dicembre alle ore 19:44
-.container2 {
-position: relative;
-text-align: center;
-color: white;
-}
-Inviato da Bes Kosova 1 Dicembre alle ore 19:44
-#contactImg {
-width: 100%;
-background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/pc5.jpg');
-background-position: center left;
-height: 240px;
-color: white;
-object-fit: cover;
-}
-11:03
-
-Inviato da
-Oggi alle ore 11:03
-<!-- Breadcrumb -->
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <ol class="breadcrumb bgB">
-                <li class="breadcrumb-item"><a href="index.html" class="text-primary">Home</a></li>
-                <li class="breadcrumb-item active text-white">About Us</li>
+        <div id="cart-items">
+            <ol id="list-item">
             </ol>
-        </div>
-    </div>
-</div>
-<!-- End Breadcrumb -->
-13:12
 
-Inviato da
-Oggi alle ore 13:12
-<h2>Send us your Feedback</h2>
-            <hr />
-
-Inviato da
-Oggi alle ore 13:12
-<!-- Rounded tabs -->
-<div class="container my-5">
-    <div class="p-5 rounded shadow mb-5 bgP">
-        <ul id="myTab" role="tablist"
-            class="nav nav-tabs nav-pills flex-column flex-sm-row text-center bg-light border-0 rounded-nav">
-            <li class="nav-item flex-sm-fill">
-                <a id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"
-                    class="nav-link border-0 text-uppercase font-weight-bold active">BASIC</a>
-            </li>
-            <li class="nav-item flex-sm-fill">
-                <a id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
-                    aria-selected="false" class="nav-link border-0 text-uppercase font-weight-bold">PRO</a>
-            </li>
-            <li class="nav-item flex-sm-fill">
-                <a id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
-                    aria-selected="false" class="nav-link border-0 text-uppercase font-weight-bold">PREMIUM</a>
-            </li>
-        </ul>
-        <div id="myTabContent" class="tab-content">
-            <div id="home" role="tabpanel" aria-labelledby="home-tab" class="tab-pane fade px-4 py-5 show active">
-                <p class="text-muted"><strong>Diagnostic Testing</strong></p>
-                <p class="text-muted"><strong>Virus Removal</strong></p>
-                <br><br>
-                <h3>&#36;39</h3>
-                <button type="button" class="btn btn-primary">BUY NOW</button>
-            </div>
-            <div id="profile" role="tabpanel" aria-labelledby="profile-tab"
-                class="tab-pane fade px-4 py-5 text-center">
-                <p class="text-muted"><strong>PC Hardware Repair</strong></p>
-                <p class="text-muted"><strong>Mobile Repair</strong></p>
-                <p class="text-muted"><strong>PC Tuneup</strong></p>
-                <br>
-                <h3>&#36;69</h3>
-                <button type="button" class="btn btn-primary">BUY NOW</button>
-            </div>
-            <div id="contact" role="tabpanel" aria-labelledby="contact-tab"
-                class="tab-pane fade px-4 py-5 text-right">
-                <p class="text-muted"><strong>Complete Tune Up & PC Repair</strong></p>
-                <p class="text-muted"><strong>Wireless Network Installation</strong></p>
-                <p class="text-muted"><strong>Data Recovery</strong></p>
-                <p class="text-muted"><strong>Laptop Rental</strong></p>
-                <h3>&#36;99</h3>
-                <button type="button" class="btn btn-primary">BUY NOW</button>
+            <div class="total-text">
+                <p>Total: </p>
+                <p id="total-price"></p>
             </div>
         </div>
+
+
+
     </div>
-</div>
-<!-- End rounded tabs -->
 
-Inviato da
-Oggi alle ore 13:13
-/* Rounded tabs */
+    <div class="items-container">
+        <!-- Item 1 -->
+        <div class="item">
+            <img src="https://assets.razerzone.com/eeimages/products/26727/rzrblade14-04__store_gallery.png">
+            <div class="overflow">
+                <i class="fa fa-cart-plus fa-5x" id="basket"></i>
+            </div>
+            <div class="item-detail">
+                <h4>RAZER BLADE - FULL HD</h4>
+                <div class="prices">
+                    <p class="price">1899</p>
+                    <p>$</p>
+                </div>
+            </div>
+        </div>
 
-@media (min-width: 576px) {
-.rounded-nav {
-    border-radius: 50rem !important;
-}
-}
+        <!-- Item 2 -->
+        <div class="item">
+            <img src="https://assets.razerzone.com/eeimages/products/752/razer-ouroboros-gallery-3__store_gallery.png">
+            <div class="overflow">
+                <i class="fa fa-cart-plus fa-5x"></i>
+            </div>
+            <div class="item-detail">
+                <h4>RAZER OUROBOROS</h4>
+                <div class="prices">
+                    <p class="price">149</p>
+                    <p>$</p>
+                </div>
+            </div>
+        </div>
 
-@media (min-width: 576px) {
-.rounded-nav .nav-link {
-    border-radius: 50rem !important;
-}
-}
+        <!-- Item 3 -->
+        <div class="item">
+            <img
+                src="https://assets.razerzone.com/eeimages/products/5890/razer-blackshark-gallery-4__store_gallery.png">
+            <div class="overflow">
+                <i class="fa fa-cart-plus fa-5x"></i>
+            </div>
+            <div class="item-detail">
+                <h4>RAZER BLACKSHARK</h4>
+                <div class="prices">
+                    <p class="price">1299</p>
+                    <p>$</p>
+                </div>
+            </div>
+        </div>
 
-.bgP {
-background-color: #444;
-}
+        <!-- Item 4 -->
+        <div class="item">
+            <img
+                src="https://assets.razerzone.com/eeimages/products/26600/razer-blackwidow-chroma-v2-gallery-04-wristrest__store_gallery.png">
+            <div class="overflow">
+                <i class="fa fa-cart-plus fa-5x"></i>
+            </div>
+            <div class="item-detail">
+                <h4>RAZER BLACKWIDOW CHROMA</h4>
+                <div class="prices">
+                    <p class="price">169</p>
+                    <p>$</p>
+                </div>
+            </div>
+        </div>
 
-.with-arrow .nav-link.active {
-position: relative;
-}
+        <!-- Item 5 -->
+        <div class="item">
+            <img src="https://assets.razerzone.com/eeimages/products/21936/fireflycloth-gallery-5__store_gallery.png">
+            <div class="overflow">
+                <i class="fa fa-cart-plus fa-5x"></i>
+            </div>
+            <div class="item-detail">
+                <h4>RAZER FIREFLY CLOTH</h4>
+                <div class="prices">
+                    <p class="price">59</p>
+                    <p>$</p>
+                </div>
+            </div>
+        </div>
 
-.with-arrow .nav-link.active::after {
-content: "";
-border-left: 6px solid transparent;
-border-right: 6px solid transparent;
-border-top: 6px solid #2b90d9;
-position: absolute;
-bottom: -6px;
-left: 50%;
-transform: translateX(-50%);
-display: block;
-}
+        <!-- Item 6 -->
+        <div class="item">
+            <img src="https://assets.razerzone.com/eeimages/products/23901/nabu-watch-std-01__store_gallery.png">
+            <div class="overflow">
+                <i class="fa fa-cart-plus fa-5x"></i>
+            </div>
+            <div class="item-detail">
+                <h4>RAZER NABU WATCH</h4>
+                <div class="prices">
+                    <p class="price">149</p>
+                    <p>$</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-/* With arrow tabs */
+
+
+
+
+
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+
+            $("#cart-items").slideUp();
+            $(".cart").on("click", function () {
+                $("#cart-items").slideToggle();
+            });
+
+            $("#items-basket").text("(" + ($("#list-item").children().length) + ")");
+
+
+            $(".item").on("click", function () {
+                $("#cart-items").slideDown();
+                setTimeout(function () {
+                    $("#cart-items").slideUp();
+                }, 2000)
+                //add items to basket
+                $(this).each(function () {
+                    var name = $(this).children(".item-detail").children("h4").text();
+                    var remove = "<button class='remove'> X </button>";
+                    var cena = "<span class='eachPrice'>" + (parseFloat($(this).children(
+                            ".item-detail").children(".prices").children(".price")
+                        .text())) + "</span>";
+                    $("#list-item").append("<li>" + name + "&#09; - &#09;" + cena + "$" +
+                        remove + "</li>");
+
+                    //number of items in basket
+                    $("#items-basket").text("(" + ($("#list-item").children().length) + ")");
+                    $("#items-basket").text();
+
+                    //calculate total price
+                    var totalPrice = 0;
+                    $(".eachPrice").each(function () {
+                        var cenaEach = parseFloat($(this).text());
+                        totalPrice += cenaEach;
+                    });
+                    $("#total-price").text(totalPrice + "$");
+                });
+
+                //remove items from basket
+                $(".remove").on("click", function () {
+                    $(this).parent().remove();
+
+                    var totalPrice = 0;
+                    $(".eachPrice").each(function () {
+                        var cenaEach = parseFloat($(this).text());
+                        totalPrice += cenaEach;
+                    });
+                    $("#total-price").text(totalPrice + "$");
+                    $("#items-basket").text("(" + ($("#list-item").children().length) + ")");
+                });
+            });
+        })
+    </script>
+</body>
+
+</html>

@@ -15,14 +15,14 @@
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
     <link rel="stylesheet" href="css/styles.css" />
-    <title> Our Wedding</title>
+    <title> OUR WEDDING</title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="img/logo wedding.jpg" height="60" width="60" /></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="weddingNavbar">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#weddingNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="weddingNavbar">
@@ -34,32 +34,75 @@
                     <li class="nav-item"> <a class="nav-link" href="ourstory.html"><i class="fa fa-list fa-lg"></i>
                             OUR
                             STORY</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i>
+                    <li class="nav-item"> <a class="nav-link" href="when&where.html"><i class="fa fa-list fa-lg"></i>
                             WHEN & WHERE</a>
                     </li>
                     <li class="nav-item"> <a class="nav-link" href="blog.html"><i class="fa fa-list fa-lg"></i> BLOG
                         </a>
                     </li>
-                    <li class="nav-item"> <a class="nav-link" href="registry.html"><i class="fa fa-list fa-lg"></i>
-                            REGISTRY </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="shop.html"><i class="fa fa-list fa-lg"></i>
+                            SHOP </a></li>
                     <li class="nav-item"><a class="nav-link" href="contactus.html"><i
                                 class="fa fa-address-card fa-lg"></i> CONTACT</a> </li>
                 </ul>
                 <span class="navbar-text ml-auto">
 
 
-                    <a role="button" href="#scheduleacallForm" class="btn btn-warning text-nowrap">
-                        <i class="fa fa-phone"></i>
-                        SCHEDULE A CALL
-                    </a>
+                    <span class="navbar-text ml-auto">
 
 
-
-                </span>
-
+                        <a role="button" href="#rsvpForm" class="btn btn-danger text-nowrap" data-toggle="modal" data-target="#loginModal">
+                            <i class="fa fa-address-book"></i>
+                            RSVP
+                        </a>
+    
+    
+    
+                    </span>
+    
+                </div>
+            </div>
+        </nav>
+        <div id="loginModal" class="modal fade" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title"> RSVP </h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-group col-12">
+                                        <label class="sr-only" for="loginEmail">Email adress</label>
+                                        <input type="email" class="form-control form-control-sm" id="loginEmail"
+                                            placeholder="Enter email">
+    
+                                    </div>
+                                    <div class="form-group col-12">
+                                        <label class="sr-only" for="loginPassword">Password</label>
+                                        <input type="password" class="form-control form-control-sm" id="loginPassword"
+                                            placeholder="Password">
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox">
+                                            <label class="form-check-label">Remember me</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <button type="button" class="btn btn-secondary btn-sm ml-auto"
+                                        data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
     <div class="container">
         <h2 class="text-center"><span>EMILI & MIke</span> 2021 </h2>
         <p class="text-center"> WE ARE GETTING MARRIED FEB 14, 2021</p>
@@ -167,11 +210,11 @@
                 <div class="col-4 col-sm-2 offset-1">
                     <h5> Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="index.html"> HOME</a></li>
-                        <li><a href="aboutus.html"> OUR GUARANTEE</a></li>
-                        <li><a href="#"> RESOURCES</a></li>
-                        <li><a href="blog.html"> BLOG</a></li>
-                        <li><a href="careers.html"> CAREERS</a></li>
+                        <li><a href="index.html"> HOME </a></li>
+                        <li><a href="ourstory.html"> OUR STORY </a></li>
+                        <li><a href="#"> WHEN & WHERE </a></li>
+                        <li><a href="blog.html"> BLOG </a></li>
+                        <li><a href="shop.html"> SHOP </a></li>
 
                         <li><a href="contactus.html"> CONTACT</a></li>
                     </ul>
@@ -191,9 +234,9 @@
                 <div class="col-sm-4 text-center">
                     <a role="button" class="btn btn-link" href="Tel:+
                     888-679-2201"> <i class="fa fa-phone"></i>
-                        1-206-555-1234</a><br>
-                    <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co"> <i
-                            class="fa fa-envelope-o"></i> campsites@nucamp.co</a>
+                    +(123) 456 - 7890 - 456 - 7890</a><br>
+                    <a role="button" class="btn btn-link" href="mailto:theaisle@qodeinteractive.com"> <i
+                            class="fa fa-envelope-o"></i> theaisle@qodeinteractive.com</a>
                 </div>
             </div>
         </div>
